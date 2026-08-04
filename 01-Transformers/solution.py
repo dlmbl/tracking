@@ -779,7 +779,7 @@ def generate_sorted_detection_data(
     half = num_samples // 2
 
     # Random sequences, highly likely unsorted
-    unsorted = generate_unsorted_sequences(num_samples - half, seq_len, vocab_size)
+    unsorted = generate_unsorted_sequences(half, seq_len, vocab_size)
     unsorted_labels = torch.zeros(half, dtype=torch.long)
 
     # Sorted sequences
